@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  title: UoA Hello World API
+  description: Check your client with cool University of Auckland Hello World API
+  version: 1.0.0
+host: api.dev.auckland.ac.nz
+schemes:
+  - https
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /hello:
+    get:
+      summary: Responds with 'Hello World' message
+      description: |
+        The HelloWorld endpoint to test your connectivity.
+      tags:
+        - hello
+      responses:
+        '200':
+          description: An array of products
+          schema:
+            type: string
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
