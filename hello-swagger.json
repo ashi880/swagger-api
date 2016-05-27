@@ -5,11 +5,11 @@
         "description": "Check your client with cool University of Auckland Hello World API",
         "version": "1.0.0"
     },
-    "host": "api.dev.auckland.ac.nz",
+    "host": "192.168.99.100:8000",
     "schemes": [
-        "https"
+        "http"
     ],
-    "basePath": "/v1",
+    "basePath": "/",
     "produces": [
         "application/json"
     ],
@@ -27,30 +27,7 @@
                         "schema": {
                             "type": "string"
                         }
-                    },
-                    "default": {
-                        "description": "Unexpected error",
-                        "schema": {
-                            "$ref": "#/definitions/Error"
-                        }
                     }
-                }
-            }
-        }
-    },
-    "definitions": {
-        "Error": {
-            "type": "object",
-            "properties": {
-                "code": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "message": {
-                    "type": "string"
-                },
-                "fields": {
-                    "type": "string"
                 }
             }
         }
