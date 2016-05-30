@@ -5,7 +5,7 @@
         "description": "Check your client with cool University of Auckland Hello World API",
         "version": "1.0.0"
     },
-    "host": "192.168.99.100:8000",
+    "host": "10.10.25.214:7777",
     "schemes": [
         "http"
     ],
